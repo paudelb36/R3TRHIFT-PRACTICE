@@ -1,0 +1,82 @@
+---
+import MegaMenu from '../components/MegaMenu.astro';
+---
+
+<nav>
+    <!-- announcement bar  -->
+    <div class="flex items-center justify-center h-[40px] bg-black gap-1">
+      <p class="text-white text-[14px]">
+        Get early access on launches and offers.
+      </p>
+      <a href="#">
+        <span class="text-white underline text-[14px]"> Sign Up For Texts </span>
+        <span><i class="ri-arrow-right-line text-[1rem] text-white"></i></span>
+      </a>
+    </div>
+  
+    <!-- main navbar  -->
+    <div class="px-[80px] flex items-center justify-between py-4 h-[106px]">
+      <div class="flex-1"></div>
+  
+      <!-- rethrift logo  -->
+      <h1
+        class="text-[64px] font-400"
+        style="font-family: 'Bebas Neue', sans-serif;"
+      >
+        RETHRIFT
+      </h1>
+  
+      <!-- searchbar & icons -->
+      <div class="flex items-center gap-6 flex-1 justify-end">
+        <!-- searchbar -->
+        <div class="relative bg-[#ffffff] rounded-md">
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            class="text-[12px] px-4 py-2 rounded-md w-[255px] h-[40px]"
+          />
+          <i
+            class="ri-search-line absolute right-3 top-1 text-black text-2xl cursor-pointer"
+          ></i>
+        </div>
+  
+        <!-- icons  -->
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <i class="ri-heart-line text-2xl cursor-pointer"></i>
+            <span
+              class="flex items-center justify-center absolute -top-1 -right-1 bg-black text-white text-[12px] h-[16px] w-[16px] rounded-full px-1"
+              >4</span
+            >
+          </div>
+          <div class="relative">
+            <i class="ri-shopping-cart-line text-2xl cursor-pointer"></i>
+            <span
+              class="flex items-center justify-center absolute -top-1 -right-1 bg-black text-white text-[12px] h-[16px] w-[16px] rounded-full px-1"
+              >2</span
+            >
+          </div>
+          <i class="ri-user-line text-2xl cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+  
+    <!-- navigations -->
+    <div class="border-b border-[#DDDBDC]">
+      <div class="px-[80px] flex items-center justify-between py-4">
+        <!-- left -->
+        <MegaMenu />
+  
+        <!-- right -->
+        <div class="flex space-x-3">
+          <button class="border px-[12px] w-[90px] py-2 text-black bg-[#D9D9D9]"
+            >TRADE</button
+          >
+          <button class="bg-black text-white px-[12px] w-[90px] py-2">SELL</button
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+ 
