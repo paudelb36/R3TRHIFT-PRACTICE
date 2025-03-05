@@ -1,0 +1,59 @@
+---
+const images = [
+  "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
+---
+
+<div class="relative w-full h-[80vh] md:h-5/6 overflow-hidden">
+  <!-- Carousel Container -->
+  <div id="carousel" class="flex transition-transform ease-in-out duration-500">
+    {images.map((image, index) => (
+      <div class="min-w-full h-[80vh] md:h-5/6">
+        <img src={image} alt={`Slide ${index + 1}`} class="w-full h-full object-cover" />
+      </div>
+    ))}
+  </div>
+
+  <!-- Indicator Buttons -->
+  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2  ">
+    {images.map((_, index) => (
+      <button
+        id={`indicator-${index}`}
+        class={`w-8 h-1  ${index === 0 ? "bg-white" : "bg-gray-400"} transition-all duration-300 cursor-pointer`}
+        onclick={`goToSlide(${index})`}
+        data-index={index}
+      />
+    ))}
+  </div>
+</div>
+
+<script is:inline>
+  const carouselInner = document.getElementById("carousel");
+  const indicators = document.querySelectorAll('[id^="indicator-"]');
+  let currentIndex = 0;
+
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+    updateIndicators();
+  }
+
+  function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("bg-white/80", index === currentIndex);
+      indicator.classList.toggle("bg-white/50", index !== currentIndex);
+    });
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  // Initialize the carousel
+  updateCarousel();
+</script>
+ 

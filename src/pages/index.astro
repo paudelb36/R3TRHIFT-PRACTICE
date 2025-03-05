@@ -1,23 +1,35 @@
----
-import Footer from '../components/Footer.astro';
-import Modal from '../components/Modal.astro';
-import Navbar from '../components/Navbar.astro';
-import Product from '../components/Product.astro';
-import ProductCard from '../components/ProductCard.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
 
+import Carousal from "../components/Carousal.astro";
+import Header from "../components/Header.astro";
+import Products from "../components/Products.astro";
+import Banner from "../components/Banner.astro";
+import Animation from "../components/Animation.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	 <Navbar />
-	 <Footer />
-	 <ProductCard />
-	 <Product />
-	 <Modal />
-
-	
+  <Header />
+  <Carousal />
+  <Products />
+  <Banner />
+  <div class="grid grid-cols-1 md:grid-cols-2 mt-24">
+    <img
+      src="https://images.vegnonveg.com/resized/X1200/widgets/4/174074680367c1b0332517c-desktop.jpg"
+      alt="Adidas Originals SL 72 RS"
+      class="w-full border-1"
+      image.png
+    />
+    <img
+      src="https://images.vegnonveg.com/resized/X1200/widgets/4/174074688567c1b085a7425-desktop.jpg"
+      alt="Adidas Originals SL 72 RS"
+      class="w-full border-1"
+    />
+  </div>
+  <Animation />
+  <Footer />
 </Layout>
