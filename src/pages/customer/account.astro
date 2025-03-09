@@ -1,0 +1,26 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+---
+
+<Layout>
+  <Header />
+  <div class="container mx-auto px-6 md:px-10 mb-5 sm:mb-10 bg-red-500">
+    <h1 class="text-3xl md:text-5xl font-light">Hi, Charles</h1>
+  </div>
+  <div class="flex px-6 md:px-28 mt-10 justify-around items-center">
+    <div class="flex  gap-6 justify-around items-center">
+      <a href="/customer/account">
+        <div class="text-xs sm:text-sm uppercase hover:underline">Account details</div></a
+      >
+      <a href="/customer/account">
+        <div class="text-xs sm:text-sm uppercase hover:underline">order history</div></a
+      >
+      <a href="/customer/account">
+        <div class="text-xs sm:text-sm uppercase hover:underline">return history</div></a
+      >
+    </div>
+    <div class="text-xs sm:text-sm uppercase ">Edit Profile</div>
+  </div>
+</Layout>
