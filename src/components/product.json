@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "name": "Adidas Originals SL 72 RS",
+      "description": "Collegiate Green/Core White",
+      "price": "Rs. 7999",
+      "image": "https://images.vegnonveg.com/resized/680X800/12627/adidas-originals-sl-72-rs-collegiate-greencore-white-67bea26148cec.jpg",
+      "hoverImage": "https://images.vegnonveg.com/resized/680X800/12627/adidas-originals-sl-72-rs-collegiate-greencore-white-67bea2616fc5b.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Converse X UNDEFEATED ONE STAR ACADEMY PRO OX",
+      "description": "BROWN/EGRET",
+      "price": "Rs. 9999",
+      "image": "https://images.vegnonveg.com/resized/680X800/12611/converse-x-undefeated-one-star-academy-pro-ox-brownegret-67b8753b27e03.jpg",
+      "hoverImage": "https://images.vegnonveg.com/resized/1360X1600/12611/converse-x-undefeated-one-star-academy-pro-ox-brownegret-67b8753bd8087.jpg"
+    },
+    
+    {
+      "id": 3,
+      "name": "Puma RS-X",
+      "description": "Bold Blue/Red",
+      "price": "Rs. 8999",
+      "image": "https://images.vegnonveg.com/resized/1360X1600/12619/puma-palermo-leather-puma-whitevapor-gray-club-red-67bd54d27a0e8.jpg",
+      "hoverImage": "https://images.vegnonveg.com/resized/1360X1600/12619/puma-palermo-leather-puma-whitevapor-gray-club-red-67bd54d28c981.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Reebok Classic Leather",
+      "description": "Chalk/White",
+      "price": "Rs. 6999",
+      "image": "https://images.vegnonveg.com/resized/1360X1600/12663/icecream-chainstitch-light-washed-denim-shirt-blue-67c177f992845.jpg",
+      "hoverImage": "https://images.vegnonveg.com/resized/1360X1600/12663/icecream-chainstitch-light-washed-denim-shirt-blue-67c177f9df664.jpg"
+    }
+  ]

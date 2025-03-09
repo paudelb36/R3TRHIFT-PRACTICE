@@ -1,3 +1,23 @@
-<div>
-  hello
+---
+const { product } = Astro.props;
+---
+
+<div class="relative mx-auto">
+  <div class="relative group cursor-pointer">
+    <img
+      src={product.image}
+      alt={product.name}
+      class="w-full"
+    />
+    <img
+      src={product.hoverImage}
+      alt={`${product.name} Hover`}
+      class="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    />
+    <div class="absolute bottom-0 w-full text-black text-center items-baseline py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-white to-transparent">
+      <h3 class="text-lg">{product.name}</h3>
+      <p class="text-sm font-bold">{product.description}</p>
+      <p class="text-sm">{product.price}</p>
+    </div>
+  </div>
 </div>
