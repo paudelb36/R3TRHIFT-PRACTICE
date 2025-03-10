@@ -4,7 +4,7 @@ import MegaMenu from "./MegaMenu.astro";
 
 <header class="relative  bg-white  z-40">
   <div class="container mx-auto">
-    <div class="grid grid-cols-3 items-center mt-5 mx-6">
+    <div class="grid grid-cols-3 items-center pt-4">
       <!-- Left: Mobile Menu Toggle -->
       <div class="flex justify-start">
         <button id="menu-toggle">
@@ -27,7 +27,9 @@ import MegaMenu from "./MegaMenu.astro";
           <i class="ri-search-line text-xl cursor-pointer"></i>
         </button>
         <i class="ri-star-fill text-xl cursor-pointer"></i>
-        <i class="ri-user-fill text-xl cursor-pointer"></i>
+        <a href="/login">
+          <i class="ri-user-fill text-xl cursor-pointer"></i>
+        </a>
         <i class="ri-shopping-bag-line text-xl cursor-pointer"></i>
       </div>
     </div>
@@ -79,7 +81,7 @@ import MegaMenu from "./MegaMenu.astro";
   </div>
 
   <!-- Search Bar (Hidden by Default) -->
-  <div id="search-bar" class="absolute top-9 md:top-24 w-full bg-white p-4 hidden">
+  <div id="search-bar" class="absolute top-9 md:top-18 w-full bg-white p-4 hidden border ">
     <form action="">
       <input
         type="search"

@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Signin from "../components/Signin.astro";
+import Signup from "../components/Signup.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+    <Header />
+    <div class="flex justify-start ml-20 w-4xl sm:justify-self-center">
+        <div class="gap-2 text-base text-black flex justify-start">
+            <button
+                onclick="showComponent('signin')"
+                class="p-2 border-none hover:underline font-semibold cursor-pointer"
+                >SIGN IN</button
+            >
+            <button
+                onclick="showComponent('signup')"
+                class="p-2 border-none hover:underline font-semibold cursor-pointer"
+                >SIGN UP</button
+            >
+        </div>
+    </div>
+    <div id="auth"></div>
+    <div id="auth-signin" style="display: none;">
+        <Signin />
+    </div>
+    <div id="auth-signup" style="display: none;">
+        <Signup />
+    </div>
+    <Footer />
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", function () {
+            showComponent("signin");
+        });
+        function showComponent(component) {
+            document.getElementById("auth").innerHTML =
+                component === "signin"
+                    ? document.getElementById("auth-signin").innerHTML
+                    : document.getElementById("auth-signup").innerHTML;
+        }
+    </script>
+</Layout>
