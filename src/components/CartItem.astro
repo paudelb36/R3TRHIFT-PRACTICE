@@ -1,3 +1,6 @@
+---
+---
+
 <!-- Cart Item -->
 <div class="grid grid-cols-12 h-auto mt-4 pb-4 border-b border-gray-400">
   <!-- Product Image -->
@@ -17,8 +20,12 @@
     <p class="text-sm sm:text-md font-semibold mt-1">Rs. 10,795</p>
 
     <!-- Size Selection -->
-    <div class="flex items-center w-3/4 sm:w-1/2 bg-gray-300 text-xs sm:text-sm mt-3 p-1 sm:p-2 ">
-      <select class="bg-gray-300 text-black outline-none border-none px-2 py-1 w-full">
+    <div
+      class="flex items-center w-3/4 sm:w-1/2 bg-gray-300 text-xs sm:text-sm mt-3 p-1 sm:p-2"
+    >
+      <select
+        class="bg-gray-300 text-black outline-none border-none px-2 py-1 w-full"
+      >
         <option value="8UK" selected>8 UK</option>
         <option value="9UK">9 UK</option>
         <option value="10UK">10 UK</option>
@@ -27,9 +34,21 @@
 
     <!-- Quantity Selector -->
     <div class="flex items-center justify-between w-3/4 sm:w-1/2 mt-2">
-      <button class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-200 text-lg ">-</button>
-      <span class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-100 text-lg font-semibold ">1</span>
-      <button class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-200 text-lg ">+</button>
+      <button
+        id="minus"
+        class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-200 text-lg"
+        >-</button
+      >
+      <span
+        id="number"
+        class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-100 text-lg font-semibold"
+        >0</span
+      >
+      <button
+        id="plus"
+        class="w-8 sm:w-1/3 h-8 sm:h-10 flex items-center justify-center bg-gray-200 text-lg"
+        >+</button
+      >
     </div>
   </div>
 
@@ -38,3 +57,22 @@
     <a href="#" class="text-xs sm:text-sm font-bold text-black">REMOVE</a>
   </div>
 </div>
+
+<script is:inline>
+  const minusBtn = document.getElementById("minus");
+  const result = document.getElementById("number");
+  const plusBtn = document.getElementById("plus");
+  var currentNumber = 0;
+
+  minusBtn.addEventListener("click", () => {
+    if (currentNumber > 0) {
+      currentNumber--;
+      result.innerHTML = currentNumber;
+    }
+  });
+
+  plusBtn.addEventListener("click", () => {
+    currentNumber++;
+    result.innerHTML = currentNumber;
+  });
+</script>
